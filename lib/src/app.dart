@@ -14,9 +14,6 @@ class GssApp extends StatelessWidget {
       getPages: AppPages.routes,
       initialRoute: Routes.INITIAL,
       theme: appThemeData,
-      home: Scaffold(
-        appBar: AppBar(),
-      ),
     );
   }
 }

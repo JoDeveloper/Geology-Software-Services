@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "736108239730",
+    "firebase_url": "https://gss-ahmed.firebaseio.com",
+    "project_id": "gss-ahmed",
+    "storage_bucket": "gss-ahmed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736108239730:android:69b2b3e3ddc323f6f45beb",
+        "android_client_info": {
+          "package_name": "com.jodeveloper.gss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736108239730-gf6n5qoj9oco4u1bjv19kp7miqt0ngf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS5SVB6F7YUAqN3ohgHDY4mn5wDdG4gcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736108239730-gf6n5qoj9oco4u1bjv19kp7miqt0ngf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

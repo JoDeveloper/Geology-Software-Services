@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,52 +13,53 @@ class SplashPage extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.orange[400]),
+            decoration: BoxDecoration(color: Color(0xFFFDFDFD)),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Expanded(
-                flex: 3,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Padding(
-                      padding: EdgeInsets.only(top: 10.0),
+              Center(child: Image.asset('assets/logo.png')),
+              Center(
+                child: SizedBox(
+                  width: 250.0,
+                  child: TextLiquidFill(
+                    boxHeight: 180,
+                    waveDuration: 3.seconds,
+                    loadDuration: 3.seconds,
+                    text: 'GSS',
+                    boxBackgroundColor: Color(0xFFFDFDFD),
+                    waveColor: Colors.orange[400],
+                    textStyle: TextStyle(
+                      letterSpacing: 3.0,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 175.0,
                     ),
-                    Center(child: Image.asset('assets/images/logo.png'))
-                  ],
+                  ),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    const Padding(
-                      padding: EdgeInsets.only(top: 24.0),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'wowcard'.tr,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 12.0,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      '${c.year}',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                  ],
+              Center(
+                child: SizedBox(
+                  width: 300.0,
+                  child: TyperAnimatedTextKit(
+                    text: [
+                      "It is not enough to do your best,",
+                    ],
+                    speed: 150.milliseconds,
+                    textStyle: TextStyle(fontSize: 30.0),
+                    textAlign: TextAlign.start,
+                    alignment: AlignmentDirectional.topStart,
+                    isRepeatingAnimation: false,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 70),
+              Text(
+                '${c.year}',
+                style: TextStyle(
+                  color: Colors.orange[400],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
                 ),
               ),
             ],

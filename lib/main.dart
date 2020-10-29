@@ -1,8 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'src/app.dart';
 
 void main() {
+  _init().then((value) => runApp(GssApp()));
+}
+
+Future<void> _init() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(GssApp());
+  await Firebase.initializeApp();
 }
