@@ -43,7 +43,7 @@ class SplashPage extends StatelessWidget {
                   width: 300.0,
                   child: TyperAnimatedTextKit(
                     text: [
-                      "It is not enough to do your best,",
+                      "Geology Software Services ",
                     ],
                     speed: 150.milliseconds,
                     textStyle: TextStyle(fontSize: 30.0),
