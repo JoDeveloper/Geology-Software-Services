@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "73222399523",
+    "project_id": "geology-software-services",
+    "storage_bucket": "geology-software-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73222399523:android:05ffa64682b1febac33396",
+        "android_client_info": {
+          "package_name": "com.jodeveloper.gss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73222399523-p8otrn82kfqvelj1kj335flnf5ldvn53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdjboPd5zwtGphvNJBfICnHyZnTop4X9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73222399523-p8otrn82kfqvelj1kj335flnf5ldvn53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
