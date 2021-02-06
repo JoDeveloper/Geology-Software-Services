@@ -57,15 +57,19 @@ class SplashPage extends GetView<SplashController> {
                 child: Center(
                   child: SizedBox(
                     width: 300.0,
-                    child: TyperAnimatedTextKit(
-                      text: [
-                        "Geology Software Services ",
-                      ],
-                      speed: 150.milliseconds,
-                      textStyle: TextStyle(fontSize: 25.0),
-                      textAlign: TextAlign.start,
-                      alignment: AlignmentDirectional.topStart,
-                      isRepeatingAnimation: false,
+                    child: ElasticIn(
+                      delay: 4.seconds,
+                      duration: 0.seconds,
+                      child: TyperAnimatedTextKit(
+                        text: [
+                          "Geology Software Services ",
+                        ],
+                        speed: 1.seconds,
+                        textStyle: TextStyle(fontSize: 22.0),
+                        textAlign: TextAlign.start,
+                        alignment: AlignmentDirectional.topStart,
+                        isRepeatingAnimation: false,
+                      ),
                     ),
                   ),
                 ),
