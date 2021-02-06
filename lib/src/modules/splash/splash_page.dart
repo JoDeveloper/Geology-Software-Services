@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,41 +19,58 @@ class SplashPage extends GetView<SplashController> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Center(child: Image.asset('assets/logo.png')),
-              Center(
-                child: SizedBox(
-                  width: Get.width - 100,
-                  child: TextLiquidFill(
-                    boxHeight: Get.height / 4,
-                    waveDuration: 3.seconds,
-                    loadDuration: 3.seconds,
-                    text: 'GSS',
-                    boxBackgroundColor: Color(0xFFFDFDFD),
-                    waveColor: Colors.orange[400],
-                    textStyle: TextStyle(
-                      letterSpacing: 3.0,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 175.0,
+              Expanded(
+                flex: 3,
+                child: BounceInDown(
+                  delay: 1.seconds,
+                  duration: 3.seconds,
+                  child: Center(
+                    child: Image.asset('assets/logo.png'),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: SizedBox(
+                    width: Get.width,
+                    child: ElasticIn(
+                      delay: 1.seconds,
+                      duration: 3.seconds,
+                      child: TyperAnimatedTextKit(
+                        text: [
+                          "GSS",
+                        ],
+                        speed: 150.milliseconds,
+                        textStyle: TextStyle(
+                            fontSize: 125.0, color: Colors.orange[400]),
+                        textAlign: TextAlign.center,
+                        alignment: AlignmentDirectional.topStart,
+                        isRepeatingAnimation: false,
+                      ),
                     ),
                   ),
                 ),
               ),
-              Center(
-                child: SizedBox(
-                  width: Get.width - 100,
-                  child: TyperAnimatedTextKit(
-                    text: [
-                      "Geology Software Services ",
-                    ],
-                    speed: 150.milliseconds,
-                    textStyle: TextStyle(fontSize: 30.0),
-                    textAlign: TextAlign.start,
-                    alignment: AlignmentDirectional.topStart,
-                    isRepeatingAnimation: false,
+              Expanded(
+                flex: 1,
+                child: Center(
+                  child: SizedBox(
+                    width: 300.0,
+                    child: TyperAnimatedTextKit(
+                      text: [
+                        "Geology Software Services ",
+                      ],
+                      speed: 150.milliseconds,
+                      textStyle: TextStyle(fontSize: 25.0),
+                      textAlign: TextAlign.start,
+                      alignment: AlignmentDirectional.topStart,
+                      isRepeatingAnimation: false,
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: Get.height / 10),
+              const SizedBox(height: 50),
               Text(
                 '${controller.year}',
                 style: TextStyle(
