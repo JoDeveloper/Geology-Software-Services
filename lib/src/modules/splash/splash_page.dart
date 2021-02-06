@@ -4,10 +4,9 @@ import 'package:get/get.dart';
 
 import 'splash_controller.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
-    final c = Get.put(SplashController());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -40,7 +39,7 @@ class SplashPage extends StatelessWidget {
               ),
               Center(
                 child: SizedBox(
-                  width: 300.0,
+                  width: Get.width - 100,
                   child: TyperAnimatedTextKit(
                     text: [
                       "Geology Software Services ",
@@ -55,7 +54,7 @@ class SplashPage extends StatelessWidget {
               ),
               const SizedBox(height: 70),
               Text(
-                '${c.year}',
+                '${controller.year}',
                 style: TextStyle(
                   color: Colors.orange[400],
                   fontWeight: FontWeight.bold,
