@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   final year = DateTime.now().year;
   @override
   void onInit() {
-    Future.delayed(const Duration(seconds: 25)).then(
+    Future.delayed(25.minutes).then(
       (value) => Get.offAndToNamed(Routes.HOME),
     );
     super.onInit();
