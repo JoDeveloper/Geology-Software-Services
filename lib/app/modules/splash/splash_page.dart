@@ -58,7 +58,7 @@ class SplashPage extends GetView<SplashController> {
                   child: SizedBox(
                     width: 300.0,
                     child: ElasticIn(
-                      delay: 4.seconds,
+                      delay: 2.seconds,
                       duration: 0.seconds,
                       child: TyperAnimatedTextKit(
                         text: [
