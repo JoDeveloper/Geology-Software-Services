@@ -14,5 +14,4 @@ class AuthController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }
