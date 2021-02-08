@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/auth/bindings/auth_binding.dart';
+import '../modules/auth/views/auth_view.dart';
 import '../modules/home/home_binfing.dart';
 import '../modules/home/home_page.dart';
 import '../modules/splash/splash_binding.dart';
@@ -17,6 +19,11 @@ mixin AppPages {
       name: Routes.HOME,
       page: () => HomePage(),
       binding: HomeBinding(),
-    )
+    ),
+    GetPage(
+      name: Routes.AUTH,
+      page: () => AuthView(),
+      binding: AuthBinding(),
+    ),
   ];
 }

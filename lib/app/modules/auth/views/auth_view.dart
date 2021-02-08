@@ -36,8 +36,9 @@ class AuthView extends GetView<AuthController> {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: 'ECORP',
-      logo: 'assets/images/ecorp-lightblue.png',
+      theme: LoginTheme(primaryColor: Colors.orange[400]),
+      title: 'G.S.S',
+      // logo: 'assets/logo.png',
       onLogin: _authUser,
       onSignup: _authUser,
       onSubmitAnimationCompleted: () {},

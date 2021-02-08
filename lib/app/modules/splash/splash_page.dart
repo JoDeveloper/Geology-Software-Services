@@ -59,7 +59,7 @@ class SplashPage extends GetView<SplashController> {
                     width: 300.0,
                     child: ElasticIn(
                       delay: 2.seconds,
-                      duration: 0.seconds,
+                      duration: 1.seconds,
                       child: TyperAnimatedTextKit(
                         text: [
                           "Geology Software Services ",
