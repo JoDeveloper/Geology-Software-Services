@@ -1,10 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'src/app.dart';
+import 'app/app.dart';
 
 void main() {
-  _init().then((value) => runApp(GssApp()));
+  _init().then((_) => runApp(GssApp()));
 }
 
 Future<void> _init() async {

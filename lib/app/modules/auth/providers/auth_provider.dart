@@ -1,37 +1,24 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthProvider extends GetConnect {
-  FirebaseAuth _auth;
   @override
   void onInit() {
-    _auth = FirebaseAuth.instance;
     httpClient.baseUrl = 'YOUR-API-URL';
   }
 
-  Future sendPhoneVerivication({String phone}) async {
-    await _auth.verifyPhoneNumber(
-      phoneNumber: '+249 $phone',
-      verificationCompleted: (credential) {
-        _auth.signInWithCredential(credential);
-      },
-      verificationFailed: (e) {
-        if (e.code == 'invalid-phone-number') {
-          print('The provided phone number is not valid.');
-        }
-      },
-      codeSent: (verificationId, resendToken) {
-        //  Update the UI - wait for the user to enter the SMS code
-        String smsCode = 'xxxx';
+  Future<UserCredential> signInWithGoogle() async {
+    final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
 
-        // Create a PhoneAuthCredential with the code
-        PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.credential(
-            verificationId: verificationId, smsCode: smsCode);
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
 
-        // Sign the user in (or link) with the credential
-        _auth.signInWithCredential(phoneAuthCredential);
-      },
-      codeAutoRetrievalTimeout: (verificationId) {},
+    final GoogleAuthCredential credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
     );
+
+    return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 }

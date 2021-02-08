@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
-import 'package:gss/src/routes/app_routes.dart';
 
-import '../modules/auth/bindings/auth_binding.dart';
-import '../modules/auth/views/auth_view.dart';
+import 'package:gss/app/modules/auth/bindings/auth_binding.dart';
+import 'package:gss/app/modules/auth/views/auth_view.dart';
 
-
+part 'app_routes.dart';
 
 class AppPages {
   static const INITIAL = Routes.HOME;
