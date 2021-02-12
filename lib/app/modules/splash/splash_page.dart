@@ -42,8 +42,7 @@ class SplashPage extends GetView<SplashController> {
                           "GSS",
                         ],
                         speed: 150.milliseconds,
-                        textStyle: TextStyle(
-                            fontSize: 125.0, color: Colors.orange[400]),
+                        textStyle: TextStyle(fontSize: 125.0, color: Colors.orange[400]),
                         textAlign: TextAlign.center,
                         alignment: AlignmentDirectional.topStart,
                         isRepeatingAnimation: false,
@@ -58,7 +57,7 @@ class SplashPage extends GetView<SplashController> {
                   child: SizedBox(
                     width: 300.0,
                     child: ElasticIn(
-                      delay: 2.seconds,
+                      delay: 1.seconds,
                       duration: 1.seconds,
                       child: TyperAnimatedTextKit(
                         text: [
